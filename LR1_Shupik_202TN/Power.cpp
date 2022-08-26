@@ -6,9 +6,9 @@ using namespace std;
 Power Power::Init(int f, float s)
 {
 	Power tmp;
-	//first - калорійність 100 г продукту;
+	//first - РєР°Р»РѕСЂС–Р№РЅС–СЃС‚СЊ 100 Рі РїСЂРѕРґСѓРєС‚Сѓ;
 	tmp.first = f;
-    //second - маса продукту в кілограмах;
+        //second - РјР°СЃР° РїСЂРѕРґСѓРєС‚Сѓ РІ РєС–Р»РѕРіСЂР°РјР°С…;
 	tmp.second = s;
 	return tmp;
 }
@@ -16,7 +16,7 @@ Power Power::Init(int f, float s)
 Power Power::Read()
 {
 	Power tmp;
-	cout << "Input сalorie content per 100 grams of product: " << endl;
+	cout << "Input Г±alorie content per 100 grams of product: " << endl;
 	cin >> tmp.first;
 	cout << "Input product weight in kilograms: " << endl;
 	cin >> tmp.second;
@@ -27,17 +27,17 @@ void Power::Display()
 {
 	
 	/*
-	Представимо, що:
-	"second" грам продукту = "А" Ккал (загальна калорійность продукту);
-	100 грам = "first" Ккал
+	РџСЂРµРґСЃС‚Р°РІРёРјРѕ, С‰Рѕ:
+	"second" РіСЂР°Рј РїСЂРѕРґСѓРєС‚Сѓ = "Рђ" РљРєР°Р» (Р·Р°РіР°Р»СЊРЅР° РєР°Р»РѕСЂС–Р№РЅРѕСЃС‚СЊ РїСЂРѕРґСѓРєС‚Сѓ);
+	100 РіСЂР°Рј = "first" РљРєР°Р»
 
-    Щоб перетворити грами в кілограми потрібно їх поділити на 1000:
+    Р©РѕР± РїРµСЂРµС‚РІРѕСЂРёС‚Рё РіСЂР°РјРё РІ РєС–Р»РѕРіСЂР°РјРё РїРѕС‚СЂС–Р±РЅРѕ С—С… РїРѕРґС–Р»РёС‚Рё РЅР° 1000:
 
-	100 грам = 0,1 кг
+	100 РіСЂР°Рј = 0,1 РєРі
 
-	Нам потрібно знайти загальну к-сть калорій "А". Тому:
+	РќР°Рј РїРѕС‚СЂС–Р±РЅРѕ Р·РЅР°Р№С‚Рё Р·Р°РіР°Р»СЊРЅСѓ Рє-СЃС‚СЊ РєР°Р»РѕСЂС–Р№ "Рђ". РўРѕРјСѓ:
 
-	Total calorie content of the product(Ккал) = first(Ккал) * second(кг)/1000 * 0,1= first(Ккал) * second(кг)/100;
+	Total calorie content of the product(РљРєР°Р») = first(РљРєР°Р») * second(РєРі)/1000 * 0,1= first(РљРєР°Р») * second(РєРі)/100;
 
 	*/
 
