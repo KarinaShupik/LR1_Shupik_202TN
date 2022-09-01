@@ -23,13 +23,28 @@
 power() — обчислення загальної калорійності продукту.
 */
 
+/*
+	Представимо, що:
+	"second" грам продукту = "А" Ккал (загальна калорійность продукту);
+	100 грам = "first" Ккал
 
-struct Power 
+	Щоб перетворити грами в кілограми потрібно їх поділити на 1000:
+
+	100 грам = 0,1 кг
+
+	Нам потрібно знайти загальну к-сть калорій "А". Тому:
+
+	Total calorie content of the product(Ккал) = first(Ккал) * second(кг)/1000 * 0,1= first(Ккал) * second(кг)/100;
+
+	*/
+
+struct Calories 
 {
-	int first;
-	float second;
-	Power Init(int f, float s);
-	Power Read();
+	int first, second;
+	Calories Init(int f, float s);
+	Calories Read();
 	void Display();
+	void Power();
 };
+
 
